@@ -212,7 +212,9 @@ typedef enum {
 #define MAVLINK_STATUS_FLAG_IN_SIGNED    4 // last incoming packet was signed and validated
 #define MAVLINK_STATUS_FLAG_IN_BADSIG    8 // last incoming packet had a bad signature
 
-#define MAVLINK_STX_MAVLINK1 0xFE          // marker for old protocol
+// FIXED BY GANGTI/20190109/MAVLINK CUSTOMIZATION
+#define MAVLINK_STX_MAVLINK1 0xEF          // marker for old protocol
+// CLOSE BY GANGTI/20190109/MAVLINK CUSTOMIZATION
 
 typedef struct __mavlink_status {
     uint8_t msg_received;               ///< Number of received messages
